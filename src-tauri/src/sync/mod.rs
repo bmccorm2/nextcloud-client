@@ -24,7 +24,7 @@ use crate::ignore::is_ignored;
 use crate::webdav::{Dav, DavError};
 use reconcile::Action;
 
-const POLL: Duration = Duration::from_secs(30);
+const POLL: Duration = Duration::from_secs(300);
 const FULL_SYNC: Duration = Duration::from_secs(3600);
 const DEBOUNCE: Duration = Duration::from_secs(2);
 const MAX_RERUNS: usize = 3;

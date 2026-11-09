@@ -53,7 +53,7 @@ Nothing is written into the sync folder except synced files and temporary `.ncsy
 
 ## How it syncs
 
-- **Triggers:** local changes (2 s debounce), a server check every 30 s, a full sync every hour, and **Sync now**.
+- **Triggers:** local changes (2 s debounce), a server check every 5 min, a full sync every hour, and **Sync now**.
 - **Deleted on the server:** the local copy goes to the macOS Trash.
 - **Deleted locally:** deleted on the server, where it lands in Nextcloud's trash bin.
 - **Edited on both sides:** the server version keeps the name. Your version is kept as `name (conflicted copy YYYY-MM-DD HHMMSS).ext`, which stays local only.
