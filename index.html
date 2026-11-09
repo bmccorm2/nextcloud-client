@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/styles.css" />
+    <title>NCSync</title>
+    <script type="module" src="/src/main.ts" defer></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <h2>Account</h2>
+        <form id="login-form" class="row">
+          <input id="server" type="url" placeholder="https://cloud.example.com" autocomplete="url" spellcheck="false" required />
+          <button id="login" type="submit">Log in</button>
+        </form>
+        <div id="login-wait" class="row" hidden>
+          <span class="grow">Finish logging in in your browser…</span>
+          <button id="cancel" type="button">Cancel</button>
+        </div>
+        <div id="logged-in" class="row" hidden>
+          <span id="who" class="grow"></span>
+          <button id="logout" type="button">Log out</button>
+        </div>
+      </section>
+
+      <section>
+        <h2>Sync folder</h2>
+        <div class="row">
+          <span id="folder" class="grow path">Not set</span>
+          <button id="choose" type="button">Choose…</button>
+        </div>
+        <div id="confirm-folder" class="confirm" hidden>
+          <p>Switch the sync folder to <b id="new-folder"></b>? The old folder is left as it is. The new folder will be fully synced with your account.</p>
+          <div class="row end">
+            <button id="confirm-no" type="button">Cancel</button>
+            <button id="confirm-yes" type="button" class="primary">Switch</button>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <label class="check"><input id="autostart" type="checkbox" /> Start at login</label>
+      </section>
+
+      <p id="error" class="error" hidden></p>
+
+      <footer>
+        <span id="dot" class="dot"></span>
+        <span id="status">…</span>
+      </footer>
+
+      <pre id="activity" class="activity" hidden></pre>
+    </main>
+  </body>
+</html>
